@@ -9,6 +9,7 @@ export default function App() {
     age: 18,
     gender: "",
   });
+
   const {
     register,
     handleSubmit,
@@ -39,6 +40,7 @@ export default function App() {
             <span style={{ color: "red" }}>{errors.name.message}</span>
           )}
         </div>
+
         <div>
           <label>Telephone</label>
           <input
@@ -56,14 +58,31 @@ export default function App() {
             <span style={{ color: "red" }}>{errors.phone.message}</span>
           )}
         </div>
+
         <div>
           <label>Email</label>
-          <input type="email" name="email" {...register("email")} />
+          <input
+            type="email"
+            name="email"
+            {...register("email", { required: "ce champ est obligatoire" })}
+          />
+          {errors.phone && (
+            <span style={{ color: "red" }}>{errors.email.message}</span>
+          )}
         </div>
+
         <div>
           <label>Age</label>
-          <input type="number" name="age" {...register("age")} />
+          <input
+            type="number"
+            name="age"
+            {...register("age", { required: "ce champ est obligatoire" })}
+          />
+          {errors.phone && (
+            <span style={{ color: "red" }}>{errors.email.message}</span>
+          )}
         </div>
+
         <div>
           <label>Genre</label>
           <select {...register("name")}>
