@@ -20,7 +20,9 @@ export default function App() {
     console.log(data);
     alert("${data.name} a été enregistré");
   };
-
+  // {
+  //   ('$formData.gender==="femme"? "enregistrée":"enregistré"');
+  // }
   return (
     <div>
       <div>
