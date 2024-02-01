@@ -24,7 +24,7 @@ export default function App() {
   //   ('$formData.gender==="femme"? "enregistrée":"enregistré"');
   // }
   return (
-    <div className="flex flex-col p-5  bg-purple-600 w-80 h-90 rounded-b-lg m-10">
+    <div className="flex flex-col p-5  bg-blue-500 w-80 h-90 rounded-md  ml-64 mt-40">
       <div>
         <h1 className="text-2xl font-semibold text-center text-white ">
           contact form
@@ -35,7 +35,7 @@ export default function App() {
           <div>
             <label className="text-white">Name</label>
             <input
-              className="bg-pink-50 rounded-full mb-4 ml-4 mt-4"
+              className="bg-pink-50 rounded-full mb-4 ml-12 mt-4 pl-2"
               type="text"
               name="name"
               {...register("name", {
@@ -50,7 +50,7 @@ export default function App() {
           <div>
             <label className="text-white">Telephone</label>
             <input
-              className="bg-pink-50 rounded-full mb-4 ml-4"
+              className="bg-pink-50 rounded-full mb-4 ml-4 pl-2"
               type="text"
               name="phone"
               {...register("phone", {
@@ -69,7 +69,7 @@ export default function App() {
           <div>
             <label className="text-white">Email</label>
             <input
-              className="bg-pink-50 rounded-full mb-4 ml-4"
+              className="bg-pink-50 rounded-full mb-4 ml-12 pl-2"
               type="email"
               name="email"
               {...register("email", { required: "ce champ est obligatoire" })}
@@ -82,7 +82,7 @@ export default function App() {
           <div>
             <label className="text-white">Age</label>
             <input
-              className="bg-pink-50 rounded-full mb-4 ml-4"
+              className="bg-pink-50 rounded-full mb-4 ml-14 pl-2"
               type="number"
               name="age"
               {...register("age", { required: "ce champ est obligatoire" })}
@@ -96,7 +96,7 @@ export default function App() {
             <label className="text-white">Genre</label>
             <select
               {...register("name")}
-              className="bg-pink-50 rounded-full mb-4 ml-4"
+              className="bg-pink-50 rounded-full mb-4 ml-11 w-46 pl-2"
             >
               <option value="Homme">Homme</option>
               <option value="Femme">Femme</option>
@@ -104,7 +104,7 @@ export default function App() {
             </select>
           </div>
           <button
-            className="bg-gradient-to-r from-gray-400 to-white-500 hover:from-pink-500 hover:to-yellow-500 rounded-lg p-2 text-white"
+            className="bg-pink-500 p-4 rounded-full ml-20 text-center  text-white"
             type="submit"
           >
             Enregistrer
